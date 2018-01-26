@@ -112,7 +112,12 @@ module Jabber
         first_element_content('body', 'http://www.w3.org/1999/xhtml')
       end
     end
-
+          
+    def set_expire(s)
+        e = Expire::XExpire.new
+        e.seconds = s
+    end  
+          
     ##
     # Sets the message's xhtml body
     #
